@@ -51,8 +51,8 @@ pip3 install -r requirements.txt
    ```  
 3. Clone the repository:  
    ```bash
-   git clone https://github.com/YOUR_USERNAME/StormFlood-TOR.git  
-   cd StormFlood-TOR  
+   git clone https://github.com/ceo-developer/StormFlood.git  
+   cd StormFlood
    ```  
 4. Install dependencies:  
    ```bash
@@ -78,8 +78,8 @@ pip3 install -r requirements.txt
    ```  
 2. Clone the repository:  
    ```bash
-   git clone https://github.com/YOUR_USERNAME/StormFlood-TOR.git  
-   cd StormFlood-TOR  
+   git clone https://github.com/ceo-developer/StormFlood.git
+   cd StormFlood  
    ```  
 3. Install required modules:  
    ```bash
@@ -101,8 +101,8 @@ pip3 install -r requirements.txt
 2. Open **Command Prompt (cmd)**.  
 3. Clone the repository:  
    ```bash
-   git clone https://github.com/YOUR_USERNAME/StormFlood-TOR.git  
-   cd StormFlood-TOR  
+   git clone https://github.com/ceo-developer/StormFlood.git
+   cd StormFlood
    ```  
 4. Install dependencies:  
    ```bash
