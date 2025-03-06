@@ -1,10 +1,9 @@
-Below is an attractive, professional **README.md** template that you can use for your GitHub repository:
 
 ```md
 # StormFlood v4.1 - Ultimate Auto UDP Flood Tool
 
 ## Developed by:
-- **Telegram ID:** [@hiden_25](https://t.me/hiden_25)
+- **Telegram ID:** [dəˈveləpər](https://t.me/hiden_25)
 - **Telegram Channel:** [H2I CODER](https://t.me/h2icoder)
 
 ---
@@ -118,12 +117,10 @@ Contributions are welcome! Feel free to fork the repository, make improvements, 
 ## Contact & Support
 
 For any queries or support, please reach out via:
-- **Telegram ID:** [@hiden_25](https://t.me/hiden_25)
+- **Telegram ID:** [dəˈveləpər](https://t.me/hiden_25)
 - **Telegram Channel:** [H2I CODER](https://t.me/h2icoder)
 
 ---
 
 *Happy Ethical Hacking!*
 ```
-
-You can modify the repository URL and your GitHub username where needed. This README provides clear instructions, highlights your features, and gives all necessary information for users on Termux, Kali Linux, and Windows.
