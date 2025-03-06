@@ -121,4 +121,3 @@ For any queries or support, please reach out via:
 ---
 
 *Happy Ethical Hacking!*
-```
