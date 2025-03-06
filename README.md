@@ -1,123 +1,144 @@
-# StormFlood v4.1 - Ultimate Auto UDP Flood Tool
+# StormFlood v4.1 - Ultimate Auto UDP Flood Tool with TOR Support  
 
 ## Developed by:
-- **Telegram ID:** [dəˈveləpər](https://t.me/hiden_25)
-- **Telegram Channel:** [H2I CODER](https://t.me/h2icoder)
+- **Telegram ID:** [dəˈveləpər](https://t.me/hiden_25)  
+- **Telegram Channel:** [H2I CODER </>](https://t.me/h2icoder)  
 
 ---
 
-## Overview
+## Overview  
 
-**StormFlood v4.1** is a powerful UDP flooding tool designed for ethical hacking and network testing. It comes equipped with features such as TOR proxy support for complete anonymity and multi-threading for high-speed packet flooding.
+**StormFlood v4.1** is an advanced UDP flooding tool with **TOR Proxy Support** for **100% anonymity**. It allows penetration testers and security researchers to stress-test networks while remaining untraceable using the **TOR network**.  
 
 > **Disclaimer:**  
-> This tool is intended solely for educational and ethical hacking purposes. Unauthorized use on networks without explicit permission is illegal and may result in severe legal consequences. Use responsibly and always within the bounds of the law.
+> This tool is meant for ethical hacking, research, and educational purposes **ONLY**. Unauthorized use of this tool is illegal and punishable by law. The developer is not responsible for any misuse.  
 
 ---
 
-## Features
+## Features  
 
-- **Auto UDP Flood Attack:** Continuously sends UDP packets to a target.
-- **TOR Proxy Support:** Route your traffic through TOR for 100% anonymity.
-- **Multi-threading:** Perform high-speed attacks with simultaneous threads.
-- **Customizable Parameters:** Set target IP, port, and attack duration.
-- **Built with Python:** Lightweight and easily modifiable for custom needs.
+✅ **UDP Flood Attack** - High-speed attack using randomly generated packets.  
+✅ **TOR Proxy Support** - Routes traffic through TOR for complete anonymity.  
+✅ **Multi-threading** - Enables faster and more effective flooding.  
+✅ **Adjustable Packet Size** - Random packet sizes from **512 to 2048 bytes**.  
+✅ **Easy-to-Use** - Simple commands to configure attack parameters.  
 
 ---
 
-## Requirements
+## Requirements  
 
-- **Python 3.x**
+- **Python 3.x**  
 
-Additional Python libraries (listed in `requirements.txt`):
-- [py-socks](https://pypi.org/project/PySocks/)
-- [stem](https://stem.torproject.org/)
+Python modules needed (included in `requirements.txt`):  
+- [PySocks](https://pypi.org/project/PySocks/) (For proxy support)  
+- [Stem](https://stem.torproject.org/) (For interacting with the TOR network)  
 
-Install dependencies via:
+To install dependencies, run:  
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ---
 
-## Installation & Usage
+## Installation & Usage  
 
-### Termux (Android)
-1. **Install Termux** from the Google Play Store or F-Droid.
-2. Update packages:
+### 📱 Termux (Android)  
+1. Install **Termux** from Play Store or F-Droid.  
+2. Update and install Python:  
    ```bash
-   pkg update && pkg upgrade
-   ```
-3. Install Python:
+   pkg update && pkg upgrade  
+   pkg install python  
+   ```  
+3. Clone the repository:  
    ```bash
-   pkg install python
-   ```
-4. Clone the repository and navigate to the folder:
+   git clone https://github.com/YOUR_USERNAME/StormFlood-TOR.git  
+   cd StormFlood-TOR  
+   ```  
+4. Install dependencies:  
    ```bash
-   git clone https://github.com/YOUR_USERNAME/StormFlood.git
-   cd StormFlood
-   ```
-5. Install required dependencies:
+   pip install -r requirements.txt  
+   ```  
+5. **Enable TOR Support:**  
    ```bash
-   pip install -r requirements.txt
-   ```
-6. Run the tool:
+   pkg install tor  
+   tor  
+   ```  
+6. Run the script:  
    ```bash
-   python stormflood.py
-   ```
-
-### Kali Linux
-1. **Open Terminal.**
-2. Update and install dependencies:
-   ```bash
-   sudo apt update && sudo apt upgrade
-   sudo apt install python3 python3-pip
-   ```
-3. Clone the repository:
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/StormFlood.git
-   cd StormFlood
-   ```
-4. Install required Python modules:
-   ```bash
-   pip3 install -r requirements.txt
-   ```
-5. Run the tool:
-   ```bash
-   python3 stormflood.py
-   ```
-
-### Windows
-1. **Install Python 3** from the [official website](https://www.python.org/downloads/).
-2. Open **Command Prompt** or **PowerShell**.
-3. Clone the repository using Git (or download the ZIP and extract it):
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/StormFlood.git
-   cd StormFlood
-   ```
-4. Install required modules:
-   ```bash
-   pip install -r requirements.txt
-   ```
-5. Run the tool:
-   ```bash
-   python stormflood.py
-   ```
+   python stormflood.py  
+   ```  
 
 ---
 
-## Contributing
-
-Contributions are welcome! Feel free to fork the repository, make improvements, and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
+### 🖥️ Kali Linux / Parrot OS  
+1. Open **Terminal** and install required packages:  
+   ```bash
+   sudo apt update && sudo apt upgrade  
+   sudo apt install python3 python3-pip tor  
+   ```  
+2. Clone the repository:  
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/StormFlood-TOR.git  
+   cd StormFlood-TOR  
+   ```  
+3. Install required modules:  
+   ```bash
+   pip3 install -r requirements.txt  
+   ```  
+4. Start the **TOR Service**:  
+   ```bash
+   service tor start  
+   ```  
+5. Run the tool:  
+   ```bash
+   python3 stormflood.py  
+   ```  
 
 ---
 
-## Contact & Support
-
-For any queries or support, please reach out via:
-- **Telegram ID:** [dəˈveləpər](https://t.me/hiden_25)
-- **Telegram Channel:** [H2I CODER](https://t.me/h2icoder)
+### 🖥️ Windows  
+1. Download and **install Python 3** from [python.org](https://www.python.org/downloads/).  
+2. Open **Command Prompt (cmd)**.  
+3. Clone the repository:  
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/StormFlood-TOR.git  
+   cd StormFlood-TOR  
+   ```  
+4. Install dependencies:  
+   ```bash
+   pip install -r requirements.txt  
+   ```  
+5. Download and **install TOR** from [torproject.org](https://www.torproject.org/download/).  
+6. Open TOR and **start the service**.  
+7. Run the script:  
+   ```bash
+   python stormflood.py  
+   ```  
 
 ---
 
-*Happy Ethical Hacking!*
+## 🔥 Usage Instructions  
+After launching the script, enter the **target IP, port, and duration**:  
+```bash
+[$] Target IP: 192.168.1.1  
+[$] Enter Port (Default: 80): 8080  
+[$] Enter Attack Duration (seconds): 60  
+[?] Use TOR Proxy? (y/n): y  
+```  
+If **TOR is enabled**, the attack will be routed through the **TOR network** for **maximum anonymity**.  
+
+---
+
+## Contributing  
+Contributions and suggestions are welcome! Fork the repo, make changes, and submit a pull request. For major changes, please open an issue first.  
+
+---
+
+## 📢 Contact & Support  
+For any queries or support, feel free to reach out:  
+- **Telegram ID:** [dəˈveləpər](https://t.me/hiden_25)  
+- **Telegram Channel:** [H2I CODER </>](https://t.me/h2icoder)  
+
+---
+
+**Stay Anonymous | Use Responsibly | Ethical Hacking Only**🚀
