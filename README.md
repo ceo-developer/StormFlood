@@ -56,7 +56,7 @@ pip3 install -r requirements.txt
    ```  
 4. Install dependencies:  
    ```bash
-   pip install -r requirements.txt  
+   pip3 install -r requirements.txt  
    ```  
 5. **Enable TOR Support:**  
    ```bash
@@ -65,7 +65,7 @@ pip3 install -r requirements.txt
    ```  
 6. Run the script:  
    ```bash
-   python stormflood.py  
+   python3 stormflood.py  
    ```  
 
 ---
